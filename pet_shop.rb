@@ -2,7 +2,6 @@ def pet_shop_name(pet_shop_name)
   return pet_shop_name[:name]
 end
 
-
 def total_cash(pet_shop)
   return pet_shop[:admin][:total_cash]
 end
@@ -26,3 +25,14 @@ end
 def stock_count(pet_shop)
   return pet_shop[:pets].count
 end
+
+def all_pets_by_breed__found(pet_shop, breed)
+  breed_of_pet = []
+    for pet in pet_shop[:pets]
+      if pet[:breed] == "British Shorthair"
+      end
+    end
+  breed_of_pet.push[pet]
+end
+
+#return breed_of_pet[]
