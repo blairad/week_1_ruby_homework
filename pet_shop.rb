@@ -72,13 +72,21 @@ end
 #     end
 #   end
 # end
+#
+# def add_pet_to_stock(pet_shop, new_pet)
+#   pet_added = []
+#   for pet in pet_shop
+#     if pet_shop[:pets].length == 0
+#       pet_added.push(new_pet)
+#     end
+#   end
+#   return pet_added
+# end
 
-def add_pet_to_stock(pet_shop, new_pet)
-  pet_added = []
-  for pet in pet_shop
-    if pet_shop[:pets].length == 0
-      pet_added.push(new_pet)
-    end
-  end
-  return pet_added
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+def remove_customer_cash(customer, removed_cash)
+  return customer[:cash] -= removed_cash
 end
