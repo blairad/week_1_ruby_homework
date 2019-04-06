@@ -46,9 +46,11 @@ end
 # #    end
 # # end
 
-def find_and_return_pet_name(pet_by_name, name)
+def find_pet_by_name(shop, name)
   pet_name = []
-  for pet_by_name in pet_shop
-    for
+  for pet in shop[:pets]
+    if pet[:name] == name
+      return pet
+    end
   end
 end
