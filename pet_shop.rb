@@ -72,3 +72,13 @@ end
 #     end
 #   end
 # end
+
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_added = []
+  for pet in pet_shop
+    if pet_shop[:pets].length == 0
+      pet_added.push(new_pet)
+    end
+  end
+  return pet_added
+end
