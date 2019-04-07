@@ -28,23 +28,23 @@ end
 
 # def all_pets_by_breed__found(shop, breed)
 #   breed_of_pet = []
-#     for pet in pet_shop[:pets]
-#       if pet[:breed] == "British Shorthair"
-#         breed_of_pet.push(pet)
+#     for pet in shop[:pets]
+#       if pet[:breed] == breed
+#         breed_of_pet.push(breed)
 #       end
 #     end
-#     return breed_of_pet
+#     return breed_of_pet.push(breed)
 # end
+
 #
-#
-# # def all_pets_by_breed__not_found(shop, breed)
-# #   breed_of_pet[]
-# #   for pet in shop[:pets]
-# #     if pet[:breed] == "Dalmation"
-# #       return nil
-# #     end
-# #    end
-# # end
+# def all_pets_by_breed__not_found(shop, breed)
+#   breed_of_pet[]
+#   for pet[:breed] in shop[:pets]
+#     if pet[:breed] == "Dalmation"
+#       return breed_of_pet[]
+#     end
+#    end
+# end
 
 def find_pet_by_name(shop, name)
   pet_name = []
@@ -90,3 +90,11 @@ end
 def remove_customer_cash(customer, removed_cash)
   return customer[:cash] -= removed_cash
 end
+
+# def customer_pet_count(person)
+#   return person[:pet] ==
+# end
+
+# def add_pet_to_customer(customer, pet_added)
+#   return customer[:pets] += pet_added
+# end
