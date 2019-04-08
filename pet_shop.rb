@@ -26,15 +26,16 @@ def stock_count(pet_shop)
   return pet_shop[:pets].count
 end
 
-# def all_pets_by_breed__found(shop, breed)
-#   breed_of_pet = []
-#     for pet in shop[:pets]
-#       if pet[:breed] == breed
-#         breed_of_pet.push(breed)
-#       end
-#     end
-#     return breed_of_pet.push(breed)
-# end
+def all_pets_by_breed__found(shop, breed)
+  breed_of_pet = []
+    for pet in shop[:pets]
+      if pet[:breed] == breed #need to push to return breed_of_pet
+      end
+    end
+    return breed_of_pet
+end
+
+#read up on loop variables
 
 #
 # def all_pets_by_breed__not_found(shop, breed)
@@ -47,31 +48,31 @@ end
 # end
 
 def find_pet_by_name(shop, name)
-  pet_name = []
   for pet in shop[:pets]
     if pet[:name] == name
       return pet
     end
   end
+  return nil
 end
 
-# def find_pet_by_name__returns_nil(shop, name)
-#   name = []
-#   # for pet in shop[:pets]
-#     if pet[:name] == "fred"
-#       return name
-#     end
-#   # end
-# end
+def find_pet_by_name__returns_nil(shop, name)
+  name = []
+  # for pet in shop[:pets]
+    if pet[:name] == "fred"
+      return name
+    end
+  # end
+end
 
-# def remove_pet_by_name(pet_shop, name)
-#   pet_name []
-#   for pet in pet_shop[:pets]
-#     if pet[:name] == name.delete
-#       return pet_name
-#     end
-#   end
-# end
+def remove_pet_by_name(pet_shop, name)
+  pet_name = []
+  for pet in pet_shop[:pets]
+    if pet[:name] == name.delete
+      return pet_name
+    end
+  end
+end
 #
 # def add_pet_to_stock(pet_shop, new_pet)
 #   pet_added = []
