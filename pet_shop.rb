@@ -48,22 +48,18 @@ def find_pet_by_name(shop, name)
   return nil
 end
 
-def find_pet_by_name__returns_nil(shop, name)
-  name = []
-  # for pet in shop[:pets]
-    if pet[:name] == "fred"
-      return name
+def find_pet_by_name(shop, name)
+   for pet in shop[:pets]
+    if pet[:name] == name
+      return pet
     end
-  # end
+  end
+  return nil
 end
 
-# def remove_pet_by_name(pet_shop, name)
-#   pet_name = []
-#   for pet in pet_shop[:pets]
-#     if pet[:name] == name.delete
-#       return pet_name
-#     end
-#   end
+def remove_pet_by_name(shop, name)
+  pet = find_pet_by_name(shop, name)
+  shop[:pets].delete(pet)
 end
 #
 def add_pet_to_stock(pet_shop, new_pet)
