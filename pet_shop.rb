@@ -26,26 +26,18 @@ def stock_count(pet_shop)
   return pet_shop[:pets].count
 end
 
-def all_pets_by_breed__found(shop, breed)
-  breed_of_pet = []
-    for pet in shop[:pets]
-      if pet[:breed] == breed #need to push to return breed_of_pet
+def pets_by_breed(pet_shop, pet_breed)
+  pet_array = []
+    for pet in pet_shop[:pets]
+      if pet[:breed] ==  pet_breed #need to push to return breed_of_pet
+        pet_array.push|(pet)
       end
     end
-    return breed_of_pet
+    return pet_array
 end
 
 #read up on loop variables
 
-#
-# def all_pets_by_breed__not_found(shop, breed)
-#   breed_of_pet[]
-#   for pet[:breed] in shop[:pets]
-#     if pet[:breed] == "Dalmation"
-#       return breed_of_pet[]
-#     end
-#    end
-# end
 
 def find_pet_by_name(shop, name)
   for pet in shop[:pets]
@@ -65,24 +57,19 @@ def find_pet_by_name__returns_nil(shop, name)
   # end
 end
 
-def remove_pet_by_name(pet_shop, name)
-  pet_name = []
-  for pet in pet_shop[:pets]
-    if pet[:name] == name.delete
-      return pet_name
-    end
-  end
-end
-#
-# def add_pet_to_stock(pet_shop, new_pet)
-#   pet_added = []
-#   for pet in pet_shop
-#     if pet_shop[:pets].length == 0
-#       pet_added.push(new_pet)
+# def remove_pet_by_name(pet_shop, name)
+#   pet_name = []
+#   for pet in pet_shop[:pets]
+#     if pet[:name] == name.delete
+#       return pet_name
 #     end
 #   end
-#   return pet_added
-# end
+end
+#
+def add_pet_to_stock(pet_shop, new_pet)
+  number_array = pet_shop[:pets]
+  return number_array.push(new_pet)
+end
 
 def customer_cash(customer)
   return customer[:cash]
@@ -92,10 +79,10 @@ def remove_customer_cash(customer, removed_cash)
   return customer[:cash] -= removed_cash
 end
 
-# def customer_pet_count(person)
-#   return person[:pet] ==
-# end
+def customer_pet_count(customer)
+  return customer[:pets].count
+end
 
-# def add_pet_to_customer(customer, pet_added)
-#   return customer[:pets] += pet_added
-# end
+def add_pet_to_customer(customer, pet_added)
+  return customer[:pets].push(pet_added)
+end
